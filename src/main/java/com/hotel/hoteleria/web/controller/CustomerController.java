@@ -28,7 +28,8 @@ public class CustomerController {
 
     @PostMapping("/save")
     public ResponseEntity<CustomerDto> save(@RequestBody CustomerDto customer) {
-        return new ResponseEntity<>(customer, HttpStatus.CREATED);
+        // Validate Request -- pending
+        return new ResponseEntity<>(customerService.save(customer), HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")

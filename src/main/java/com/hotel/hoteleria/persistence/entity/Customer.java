@@ -17,9 +17,6 @@ public class Customer {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "user_id")
-    private Long userId;
-
     @Column(name = "first_name")
     private String firstName;
 
@@ -32,7 +29,7 @@ public class Customer {
 
     //relationships
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
     @JoinColumn(name = "user_id", insertable = false, updatable = false)
     private User user;
 

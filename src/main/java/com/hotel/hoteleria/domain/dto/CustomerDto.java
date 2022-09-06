@@ -11,9 +11,7 @@ public class CustomerDto {
     private Long customerId;
     private String firstName;
     private String lastName;
-    private String email;
-    private String password;
-    private String passwordConfirm;
+    private UserDto user;
     private Date birthdate;
     private Boolean state;
 }
